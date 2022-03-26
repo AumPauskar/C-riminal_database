@@ -1,8 +1,14 @@
+// importing stuff
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-int fetch() {
+// the function
+int fetch(char arg[]) {
+
+	// --------------------
+	// storing algorithm
+	// creating a structure that stores all the data
 	struct data {
 		char lname[64];
 		char fname[64];
@@ -22,9 +28,6 @@ int fetch() {
 		printf("Yea\n");
 	}
 
-	char search[64];
-	printf("Enter the search term: ");
-	scanf("%s", search);
 
 	while (fgets(buffer, 1024, fp)) {
 		col = 0;
@@ -60,8 +63,13 @@ int fetch() {
 				printf(d[count].pob, value);
 			}
 
-			printf("%s", value);
+			printf("%s ", d[count].lname);
 			col++;
+			count++;
 		}
 	}
+
+	// storing algorithm ends
+	// --------------------
+
 }
