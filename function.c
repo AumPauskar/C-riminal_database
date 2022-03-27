@@ -36,40 +36,33 @@ int fetch(char arg[]) {
 			continue;
 		}
 
-		char* value = strtok(buffer, ", ");
+		char* value = strtok(buffer, ",");
 
 		while (value) {
 
-			value = strtok(NULL, ", ");
-
-			// column 1
 			if (col == 0) {
 				strcpy(d[count].lname, value);
-			}
-			// col 2
-			if (col == 1) {
-				printf(d[count].fname, value);
-			}
-			// col 3
-			if (col == 2) {
-				printf(d[count].gender, value);
-			}
-			// column 4
-			if (col == 3) {
-				printf(d[count].age, value);
-			}
-			// column 5
-			if (col == 4) {
-				printf(d[count].pob, value);
+			} else if (col == 1) {
+				strcpy(d[count].fname, value);
+			} else if (col == 2) {
+				strcpy(d[count].gender, value);
+			} else if (col == 3) {
+				strcpy(d[count].age, value);
+			} else if (col == 4) {
+				strcpy(d[count].pob, value);
 			}
 
-			printf("%s ", d[count].lname);
+			value = strtok(NULL, ",");
 			col++;
-			count++;
 		}
+		count++;
 	}
 
 	// storing algorithm ends
 	// --------------------
+
+	// --------------------
+	// searching algorithm starts
+
 
 }
