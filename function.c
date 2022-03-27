@@ -63,6 +63,18 @@ int fetch(char arg[]) {
 
 	// --------------------
 	// searching algorithm starts
+	int index = 0;
+	for (int i = 0; i < count; i++) {
+		if (strcmp(arg, d[i].lname) == 0) {
+			index = i;
+			break;
+		}
+	}
 
+	printf("Last name:\t%s\n", d[index].lname);
+	printf("First name:\t%s\n", d[index].fname);
+	printf("Gender:\t\t%s\n", d[index].gender);
+	printf("Age:\t\t%s\n", d[index].age);
+	printf("Birth:\t\t%s\n", d[index].pob);
 
 }
